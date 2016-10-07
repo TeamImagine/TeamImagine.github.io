@@ -1,0 +1,27 @@
+{
+  "name": "teamimagine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamImagine/TeamImagine.github.io.git"
+  },
+  "author": "MurphyL",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/TeamImagine/TeamImagine.github.io/issues"
+  },
+  "homepage": "https://github.com/TeamImagine/TeamImagine.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "normalize.css": "^5.0.0"
+  }
+}
