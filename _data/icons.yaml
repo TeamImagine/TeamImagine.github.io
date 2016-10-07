@@ -1,0 +1,10 @@
+- id: homework
+  icon: homework-icon
+  name: 作业本
+  footer:
+    type: notice
+    text: 列表中，状态红色的中划线的题目为待完成。
+
+- id: favourate
+  icon: favourate-icon
+  name: 收藏夹

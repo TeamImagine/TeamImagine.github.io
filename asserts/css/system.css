@@ -1,0 +1,418 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+button,
+select,
+option,
+textarea,
+p,
+blockquote,
+th,
+td {
+    font-family: 'Microsoft YaHei', '微软雅黑', helvetica, arial, verdana, tahoma, sans-serif;
+}
+body#homepage {
+    /** 隐藏溢出，避免出现滚动条 **/
+    overflow: hidden;
+
+    min-width: 1024px;
+    /** 背景图自动适应而不显示空白的问题的解决方法参考：http://getpocket.com/a/read/809493626 */
+
+    background: url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+
+    color: #000;
+}
+a:hover {
+    text-decoration: none;
+}
+.darkgrey {
+    color: darkgray;
+}
+.red-text,
+.notice {
+    color: red;
+}
+.green-text {
+    color: green;
+}
+
+.flex-wrapper {
+    display: -webkit-flex;
+    display:         flex;
+}
+.flex-initial {
+    -webkit-flex: initial;
+            flex: initial;
+}
+/***
+ * Animatd
+ */
+
+.item-window-animated {
+    -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+/***
+ * Fix
+ */
+.clearfix:after {
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '.';
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+/***
+ * Optimize easyui in chinese
+ */
+
+.window-footer {
+    font-size: 14px;
+
+    padding: 3px 5px 2px;
+}
+
+/***
+ * 载入遮罩
+ */
+
+#mask {
+    position: fixed;
+    z-index: 999999;
+
+    width: 100%;
+    height: 100%;
+
+    background: purple;
+}
+#login {
+    width: 400px;
+    height: 280px;
+    margin: 13% auto 0 auto;
+
+    color: #fff;
+}
+#login a {
+    color: #fff;
+}
+#login .avatar {
+    width: 150px;
+    min-width: 150px;
+    padding-right: 10px;
+}
+#login .avatar img {
+    width: 100%;
+}
+#login .form h2,
+#login .form p,
+#login .form input {
+    margin: 0;
+    padding: 0;
+}
+#login .form h2 {
+    font-size: 30px;
+    font-weight: 300;
+}
+#login .form #welcome {
+    width: 190px;
+    height: 26px;
+    margin-top: 15px;
+    padding: 0 30px 0 5px;
+}
+/***
+ * 桌面图标矩阵
+ */
+
+#matrix {
+    overflow: hidden;
+
+    max-height: 740px;
+}
+#matrix .item {
+    position: fixed;
+
+    overflow: hidden;
+
+    width: 75px;
+    height: 72px;
+
+    cursor: pointer;
+    text-align: center;
+
+    border-radius: 3px;
+}
+#matrix .item:hover {
+    opacity: .6;
+    background: darkgray;
+}
+#matrix .item.clicked,
+#matrix .item:active {
+    -webkit-box-shadow: 0 0 1px black inset;
+       -moz-box-shadow: 0 0 1px black inset;
+            box-shadow: 0 0 1px black inset;
+}
+#matrix .item .icon {
+    line-height: 60px;
+
+    height: 50px;
+}
+#matrix .item .name {
+    font-size: 14px;
+
+    color: #fff;
+}
+#matrix .item-icon {
+    display: inline-block;
+
+    width: 35px;
+    height: 32px;
+    margin-top: 10px;
+}
+#homework-icon,
+#homework-task-list-item {
+    background: url(../img/icons.fw.png) -459px -85px;
+}
+#homework-task-list-item {
+    background-position: -455px -85px;
+    /* background-size: 30px; */
+}
+#favourate-icon,
+#favourate-task-list-item {
+    background: url(../img/icons.fw.png) -458px -122px;
+}
+#favourate-task-list-item {
+    background-position: -455px -122px;
+    /* background-size: 30px; */
+}
+#cool-icon,
+#cool-task-list-item {
+    background: url(../img/icons.fw.png) -458px -160px;
+}
+#comment-icon,
+#comment-task-list-item {
+    background: url(../img/icons.fw.png) -458px -237px;
+}
+#development-icon,
+#development-task-list-item {
+    background: url(../img/icons.fw.png) -458px -199px;
+}
+#development-task-list-item {
+    background-position: -455px -199px;
+    /* background-size: 30px; */
+}
+/***
+ * 任务栏
+ */
+
+#start-button,
+#task-list,
+#function-menu {
+    line-height: 35px;
+
+    position: fixed;
+    bottom: 0;
+
+    height: 35px;
+
+    text-align: center;
+
+    color: #fff;
+}
+#start-button,
+#task-list {
+    left: 0;
+}
+#start-button {
+    z-index: 1;
+
+    width: 45px;
+}
+#start-button:hover {
+    opacity: .9;
+    color: purple;
+    background: black;
+    -webkit-box-shadow: -5px 0 5px black;
+       -moz-box-shadow: -5px 0 5px black;
+            box-shadow: -5px 0 5px black;
+}
+#task-list {
+    width: 100%;
+    padding-left: 45px;
+
+    opacity: .5;
+    background: #7da9ff;
+    -webkit-box-shadow: 0 0 50px black;
+       -moz-box-shadow: 0 0 50px black;
+            box-shadow: 0 0 50px black;
+}
+#task-list .task-item {
+    width: 40px;
+    height: 100%;
+    margin-right: 3px;
+
+    cursor: pointer;
+
+    opacity: .8;
+    border: 1px solid #fff;
+    border-radius: 2px;
+
+    -webkit-flex: initial;
+            flex: initial;
+}
+#function-menu {
+    right: 0;
+
+    cursor: pointer;
+}
+#function-menu > .func {
+    height: 40px;
+
+    -webkit-flex: initial;
+            flex: initial;
+}
+#network-status {
+    line-height: 37px;
+
+    width: 30px;
+
+    opacity: .8;
+}
+#system-clock {
+    font-size: 14px;
+    line-height: 35px;
+
+    width: 60px;
+}
+#show-desktop {
+    width: 15px;
+}
+#function-menu > .func:hover {
+    -webkit-box-shadow: 0 -3px 3px black inset;
+       -moz-box-shadow: 0 -3px 3px black inset;
+            box-shadow: 0 -3px 3px black inset;
+}
+#window-queen {
+    display: none;
+}
+/***
+ * homework
+ */
+.west-column {
+    width: 75%;
+    height: 98%;
+    padding-left: 10px;
+}
+.grid-wrapper {
+    height: 99%;
+    padding: 1% 0;
+}
+.east-column {
+    width: 25%;
+    height: 100%;
+    margin: 0 12px;
+    padding: 0 15px;
+
+    border-left: 1px solid #ccc;
+}
+.east-column p {
+    line-height: 18px;
+
+    text-indent: 2em;
+}
+.east-column table {
+    width: 100%;
+}
+.east-column table tr {
+    line-height: 20px;
+
+    border-bottom: 1px solid #ccc;
+}
+.east-column table ul,
+.east-column table ol {
+    margin: 0;
+    padding: 0;
+}
+.east-column table li {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+/***
+ * homework answer page
+ */
+
+.homework-answer-wrapper {
+    font-size: 14px;
+}
+
+/***
+ * background
+ */
+#bg-list {
+    margin: 0;
+    padding: 10px;
+}
+
+#bg-list li {
+    display: inline-block;
+
+    width: 32%;
+    padding: 5px;
+
+    list-style: none;
+
+    cursor: pointer;
+}
+
+#bg-list img {
+    width: 100%;
+}

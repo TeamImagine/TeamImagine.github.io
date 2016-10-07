@@ -1,0 +1,97 @@
+
+---
+layout: nil
+---
+<!doctype html>
+<html lang="zh-CN">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <title>{{ site.title }}</title>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="email" content="{{ site.author.email }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="license" href="/license.txt" type="plain/text">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/asserts/css/animate.css"/>
+    <link rel="stylesheet" href="/asserts/css/normalize.css"/>
+    <link rel="stylesheet" href="/asserts/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/asserts/css/easyui/themes/metro/easyui.css"/>
+    <link rel="stylesheet" href="/asserts/css/easyui/themes/icon.css"/>
+    <link rel="stylesheet" href="/asserts/css/system.css"/>
+    <script src="/asserts/js/jquery.min.js"></script>
+    <script src="/asserts/js/jquery.tmpl.min.js"></script>
+</head>
+<body id="homepage" oncopy="return false" oncut="return false" onselectstart="return false" oncontextmenu="return false">
+<div id="mask">
+    <div id="login" class="flex-wrapper">
+        <div class="avatar flex-initial">
+            <img src="/asserts/img/avatar.jpg" alt="图像"/>
+        </div>
+        <form class="form flex-initial" action="javascript:;">
+            <h2>MurphyL</h2>
+            <p>im@murphyl.com</p>
+            <p class="status darkgrey">欢迎到访!</p>
+            <!-- <input type="password" name="password" id="password" maxlength="15"/>
+            <a class="btn" href="javascript:;"><i class="fa fa-arrow-right"></i></a> -->
+            <div id="welcome"><i class="fa fa-spinner fa-spin"></i> 正在初始化...</div>
+        </form>
+    </div>
+</div>
+<div id="container">
+    <div id="desktop">
+        <div id="matrix">
+            <div class="item" id="homework" data-footer-type="notice" data-footer-text="列表中，状态红色的中划线的题目为待完成。">
+                <div class="icon"><i id="homework-icon" class="item-icon"></i></div>
+                <div class="name">作业本</div>
+            </div>
+            <div class="item" id="favourate" data-footer-type="" data-footer-text="">
+                <div class="icon"><i id="favourate-icon" class="item-icon"></i></div>
+                <div class="name">收藏夹</div>
+            </div>
+            <div class="item" id="cool" data-footer-type="" data-footer-text="">
+                <div class="icon"><i id="cool-icon" class="item-icon"></i></div>
+                <div class="name">酷技术</div>
+            </div>
+            <div class="item" id="development" data-footer-type="" data-footer-text="">
+                <div class="icon"><i id="development-icon" class="item-icon"></i></div>
+                <div class="name">猿社区</div>
+            </div>
+            <div class="item" id="comment" data-footer-type="notice" data-footer-text="你和我说的话大家都能看见哦~">
+                <div class="icon"><i id="comment-icon" class="item-icon"></i></div>
+                <div class="name">留言板</div>
+            </div>
+        </div>
+    </div>
+    <div id="task-bar">
+        <!-- 避免 start 跟随 task-bar 的透明度 -->
+        <div id="start-button">
+            <i class="fa fa-windows"></i>
+        </div>
+        <div id="task-list" class="flex-wrapper"></div>
+        <div id="function-menu" class="flex-wrapper">
+            <div id="network-status" class="func">
+                <i class="fa fa-wifi"></i>
+            </div>
+            <div id="system-clock" class="func"></div>
+            <div id="show-desktop" class="func">&nbsp;</div>
+        </div>
+    </div>
+</div>
+<div id="mm" class="easyui-menu" style="width:120px;">
+    <div id="background-menu-item" data-options="iconCls:'icon-reload'">切换壁纸</div>
+</div>
+<div id="window-queen"></div>
+<script type="text/html" id="window-template">
+    <div id="${itemId}-window-container" title="${itemName}" data-item-id="${itemId}" class="easyui-dialog" resizable ="true" collapsible="false" minimizable="true" maximizable="true" cache="true" href="/asserts/tpl/${itemId}/" style="width: ${windowWidth}px; height: ${windowHeight}px;"
+    closed="true" shadow="false" data-options="{{if (footerType && footerText)}}footer: '#${itemId}-footer', {{/if}}onBeforeOpen: itemWindowOpenPb, onOpen: itemWindowOpenCb, onMinimize: itemWindowMinsizeCb, onBeforeClose: itemWindowCloseCb">
+    </div>
+    {{if (footerType && footerText)}}<div id="${itemId}-footer" class="window-footer"><b class="${footerType}">${footerName}：</b>${footerText}</div>{{/if}}
+</script>
+<script src="/asserts/js/loaded.js"></script>
+<script src="/asserts/js/jquery.easyui.min.js"></script>
+<script src="/asserts/js/system.js"></script>
+</body>
+</html>
