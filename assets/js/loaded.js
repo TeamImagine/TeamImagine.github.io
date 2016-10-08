@@ -24,7 +24,19 @@ $(() => {
             cache: true,
             href: '/assets/tpl/' + conf.id + '/index.html',
             modal: false,
-            collapsible: false
+            collapsible: false,
+            onBeforeOpen: function(){
+                ele.window('window').addClass('item-window-animated zoomInUp');
+            },
+            onOpen: function(){
+                ele.removeClass('maximized');
+            },
+            onMinimize: function(){
+                $('#' + this.id).addClass('maximized');
+            },
+            onBeforeClose: function(){
+                $('#' + conf.id + '-task-list-item').remove();
+            }
         });
         $('#' + conf.id).click(() => {
             $('#' + conf.id + '-window').window('open')
@@ -68,20 +80,6 @@ $(() => {
         $('#background-window-container').window('open');
     });
 });
-
-var itemWindowOpenPb = function() {
-    $('#' + this.id).window('window').addClass('item-window-animated zoomInUp');
-};
-var itemWindowOpenCb = function() {
-    $('#' + this.id).removeClass('maximized');
-    // $('#' + this.id).window('window').removeClass('animated bounceIn');
-};
-var itemWindowMinsizeCb = function() {
-    $('#' + this.id).addClass('maximized');
-};
-var itemWindowCloseCb = function() {
-    $('#' + this.getAttribute('data-item-id') + '-task-list-item').remove();
-}
 
 var messager = {
     slide: function(title, text) {
