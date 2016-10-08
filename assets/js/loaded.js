@@ -66,6 +66,7 @@ $(() => {
         $('#background-window-container').window('open');
     });
 });
+
 var itemWindowOpenPb = function() {
     $('#' + this.id).window('window').addClass('item-window-animated zoomInUp');
 };
