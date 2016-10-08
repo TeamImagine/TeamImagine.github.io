@@ -1,24 +1,24 @@
 - id: css
   name: CSS
   descrption: 说说CSS
-  children：
+  children:
     - id: 1
-    name: "DIV/CSS 让层自适应屏幕高度（height）"
-    descrption: "想让自己的网站自动判断电脑屏幕的高度，然后让层自动铺满屏幕。"
-    url: "http://blog.sina.com.cn/s/blog_66de2abc0100ueo3.html"
+      name: "DIV/CSS 让层自适应屏幕高度（height）"
+      descrption: "想让自己的网站自动判断电脑屏幕的高度，然后让层自动铺满屏幕。"
+      url: "http://blog.sina.com.cn/s/blog_66de2abc0100ueo3.html"
 - id: design
   name: UED
   descrption: 设计、用户体验设计/研究
-  children：
+  children:
     - id: 2
-    name: "如何忘却jQuery，开始使用JavaScript原生API"
-    descrption: "JavaScript就在这里随时等候你的召唤，但是也许你还没有准备好如何使用他。为什么不用jQuery呢？因为它很慢并且你的网站真的不需要这些多余的负担。"
-    url: "http://blog.jobbole.com/52195/"
-  - id: 8
-    name: "JavaScript闭包详解【1】"
-    descrption: "闭包就是一种在函数内访问和操作外部变量的方式，一般情况下，我们会在函数外部定义一些变量以供函数内部使用。"
-    url: "http://www.w3ctech.com/topic/770"
-  - id: 9
-    name: "JavaScript闭包详解【2】"
-    descrption: "闭包就是一种在函数内访问和操作外部变量的方式，一般情况下，我们会在函数外部定义一些变量以供函数内部使用。"
-    url: "http://www.w3ctech.com/topic/771"
+      name: "如何忘却jQuery，开始使用JavaScript原生API"
+      descrption: "JavaScript就在这里随时等候你的召唤，但是也许你还没有准备好如何使用他。为什么不用jQuery呢？因为它很慢并且你的网站真的不需要这些多余的负担。"
+      url: "http://blog.jobbole.com/52195/"
+    - id: 8
+      name: "JavaScript闭包详解【1】"
+      descrption: "闭包就是一种在函数内访问和操作外部变量的方式，一般情况下，我们会在函数外部定义一些变量以供函数内部使用。"
+      url: "http://www.w3ctech.com/topic/770"
+    - id: 9
+      name: "JavaScript闭包详解【2】"
+      descrption: "闭包就是一种在函数内访问和操作外部变量的方式，一般情况下，我们会在函数外部定义一些变量以供函数内部使用。"
+      url: "http://www.w3ctech.com/topic/771"
