@@ -16,7 +16,7 @@ $(() => {
     },
     tpl = $('#window-template').html(), // 窗口外包装
     addWindowTemplate = function(id, innerText, type, text){
-        $.tmpl(tpl, {
+        /*$.tmpl(tpl, {
             itemId: id, // 图表相关
             itemName: innerText,
             windowWidth: window.windowHeight / 0.618, // 动态的窗口宽度，也人云亦云一把，使用黄金分隔（0.618）
@@ -24,7 +24,7 @@ $(() => {
             footerType: type, // 窗口的 footer 的类型
             footerName: ft[type], // 窗口 footer 文本中加粗的部分
             footerText: text // 窗口 footer 文本中布加粗的部分
-        }).appendTo('#window-queen');
+        }).appendTo('#window-queen');*/
     };
     $('#matrix .item').each(function(i, o) {
         var type = o.getAttribute('data-footer-type'),
