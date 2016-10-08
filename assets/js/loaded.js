@@ -25,9 +25,6 @@ $(() => {
             href: '/assets/tpl/' + conf.id + '/index.html',
             modal: false,
             collapsible: false,
-            onBeforeOpen: function(){
-                ele.window('window').addClass('item-window-animated zoomInUp');
-            },
             onOpen: function(){
                 ele.removeClass('maximized');
             },
