@@ -16,7 +16,8 @@ $(() => {
     }, 2500);
 
     // 弹窗相关
-    var windowWidth = $(document).width(),
+    var taskbar = $('#task-list'),
+        windowWidth = $(document).width(),
         windowHeight = $(document).height(),
         matrixOffsetX = 10, matrixOffsetY = 10;
     if (windowHeight > windowWidth) { // 避免出现显示器竖放导致宽度小于高度的情况
@@ -27,7 +28,7 @@ $(() => {
     var renderWindow = (conf) => {
         var ele = $('<li>');
         $('#window-queen').append(ele);
-        ele.window({
+        return ele.window({
             id: conf.id + '-window',
             title: conf.name,
             width: windowHeight / 0.618,
@@ -52,9 +53,23 @@ $(() => {
 
     $.get('/assets/json/icons.json', (icons) => {
         icons.forEach((icon, i) => {
-            renderWindow(icon);
-            $('#' + icon.id).click(() => {
-                $('#' + icon.id + '-window').window('open')
+            var win = renderWindow(icon),
+                tid = icon.id + '-task-list-item';
+            $('#' + icon.id).css({
+                top: matrixOffsetX + 'px',
+                left: matrixOffsetY + 'px'
+            }).click(() => {
+                $('#' + icon.id + '-window').window('open', 'center');
+                var taskicon = taskbar.append($('<a id="' + tid + '" class="task-item" href="javascript:;"></a>'));
+                if (!navigator.onLine) {
+                    alert('网络已离线...');
+                }
+                // 点击状态栏按钮触发不同的动作
+                if (win.hasClass('maximized')) {
+                    win.window('open');
+                } else {
+                    win.window('minimize');
+                }
             });
             // 桌面图标换列，重新计算偏移量
             if (i > 0 && i % 9 === 0) { 
@@ -64,29 +79,6 @@ $(() => {
             $('#' + icon.id).css({
                 top: matrixOffsetX + 'px',
                 left: matrixOffsetY + 'px'
-            }).click(function(e) { // 绑定桌面图标点击事件
-                var _this = $(e.target).closest('.item'),
-                    wid = icon.id + '-window',
-                    win = $('#' + wid),
-                    tid = icon.id + '-task-list-item',
-                    url = '/asserts/tpl/' + icon.id + '/';
-                // $('#' + wid).window('open', 'center'); // 弹出层居中
-                // 增加任务栏图标
-                if ($('#' + tid).length === 0) {
-                    var iconHtml = '<a id="' + tid + '" class="task-item" href="javascript:;"></a>';
-                    $('#task-list').append($(iconHtml));
-                    $('#' + tid).click(function() {
-                        if (!navigator.onLine) {
-                            alert('网络已离线...');
-                        }
-                        // 点击状态栏按钮触发不同的动作
-                        if (win.hasClass('maximized')) {
-                            win.window('open');
-                        } else {
-                            win.window('minimize');
-                        }
-                    });
-                }
             });
             matrixOffsetX += 80; // 累加纵向的偏移量
         });
