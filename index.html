@@ -31,11 +31,9 @@ layout: nil
             <img src="/assets/img/avatar.jpg" alt="图像"/>
         </div>
         <form class="form flex-initial" action="javascript:;">
-            <h2>MurphyL</h2>
-            <p>im@murphyl.com</p>
+            <h2>{{ site.author.name }}</h2>
+            <p>{{ site.author.email }}</p>
             <p class="status darkgrey">欢迎到访!</p>
-            <!-- <input type="password" name="password" id="password" maxlength="15"/>
-            <a class="btn" href="javascript:;"><i class="fa fa-arrow-right"></i></a> -->
             <div id="welcome"><i class="fa fa-spinner fa-spin"></i> 正在初始化...</div>
         </form>
     </div>
@@ -43,7 +41,13 @@ layout: nil
 <div id="container">
     <div id="desktop">
         <div id="matrix">
-            <div class="item" id="homework" data-footer-type="notice" data-footer-text="列表中，状态红色的中划线的题目为待完成。">
+            {% for icon in site.data.icons %}
+            <div class="item" id="{{ homework.id }}" data-footer-type="" data-footer-text="{{ homework.footer }}">
+                <div class="icon"><i id="{{ homework.id }}-icon" class="item-icon"></i></div>
+                <div class="name">{{ homework.name }}</div>
+            </div>
+            {% endfor %}
+            <!-- <div class="item" id="homework" data-footer-type="notice" data-footer-text="列表中，状态红色的中划线的题目为待完成。">
                 <div class="icon"><i id="homework-icon" class="item-icon"></i></div>
                 <div class="name">作业本</div>
             </div>
@@ -62,7 +66,7 @@ layout: nil
             <div class="item" id="comment" data-footer-type="notice" data-footer-text="你和我说的话大家都能看见哦~">
                 <div class="icon"><i id="comment-icon" class="item-icon"></i></div>
                 <div class="name">留言板</div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div id="task-bar">
