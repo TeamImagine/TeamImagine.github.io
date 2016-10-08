@@ -33,7 +33,7 @@ $(() => {
             width: windowHeight / 0.618,
             height: windowHeight,
             closed: true,
-            cache: true,
+            cache: false,
             href: '/assets/tpl/' + conf.id + '/index.html',
             modal: false,
             collapsible: false,
