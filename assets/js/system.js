@@ -28,7 +28,7 @@ $(() => {
     var renderWindow = (conf) => {
         var ele = $('<li>');
         $('#window-queen').append(ele);
-        return ele.window({
+        ele.window({
             id: conf.id + '-window',
             title: conf.name,
             width: windowHeight / 0.618,
@@ -53,7 +53,8 @@ $(() => {
 
     $.get('/assets/json/icons.json', (icons) => {
         icons.forEach((icon, i) => {
-            var win = renderWindow(icon),
+            renderWindow(icon);
+            var win = $('#' + icon.id + 'window'),
                 tid = icon.id + '-task-list-item';
             $('#' + icon.id).css({
                 top: matrixOffsetX + 'px',
@@ -68,7 +69,7 @@ $(() => {
                     alert('网络已离线...');
                 }
                 // 点击状态栏按钮触发不同的动作
-                taskicon.click(() => {
+                taskicon.click(function(){
                     if (win.hasClass('maximized')) {
                         win.window('open');
                     } else {
