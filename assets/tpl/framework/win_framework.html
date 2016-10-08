@@ -1,4 +1,0 @@
-<div id="{{ itemId }}-window-container" title="{{ itemName }}" data-item-id="{{ itemId }}" class="easyui-dialog" resizable ="true" collapsible="false" minimizable="true" maximizable="true" cache="true" href="/assets/tpl/{{ itemId }}/" style="width: {{ windowWidth | int }}px; height: {{ windowHeight | int }}px;"
-    closed="true" shadow="false">
-</div>
-{%if (footerType and footerText) %}<div id="{{ itemId }}-footer" class="window-footer"><b class="{{ footerType }}">{{ footerName }}：</b>{{ footerText }}</div>{% endif %}
