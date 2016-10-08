@@ -2,4 +2,5 @@
 layout: nil
 ---
 
-{{ site.data.homework | jsonify }}
+{"total": {{ site.data.homework | size }}, "rows": {{ site.data.homework | jsonify }} }
+
