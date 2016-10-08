@@ -43,7 +43,7 @@ var initDatagrid = function() {
         onLoadSuccess: function(){
             $('.do-answer').click(function(){
                 // window.open('homework/answer?id=' + this.getAttribute('data-id'));
-                $.post('https://api.staticman.net/v1/entry/TeamImagine/TeamImagine.github.io/gh-pages', {title: 'a', description: 'description'}, (data) => {
+                $.post('https://api.staticman.net/v1/entry/TeamImagine/TeamImagine.github.io/test', {title: 'a', description: 'description'}, (data) => {
                     console.log(data)
                 });
             });
