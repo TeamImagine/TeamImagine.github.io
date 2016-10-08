@@ -51,8 +51,8 @@ $(() => {
     };
 
     $.get('/icons.json', (icons) => {
-        icons.forEach((icon, index) => {
-            renderWindow(icon, i);
+        icons.forEach((icon, i) => {
+            renderWindow(icon);
             $('#' + icon.id).click(() => {
                 $('#' + icon.id + '-window').window('open')
             });
