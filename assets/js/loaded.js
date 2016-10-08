@@ -16,8 +16,8 @@ $(() => {
         $('#window-queen').append(ele);
         ele.window({
             title: conf.title,
-            width: windowHeight,
-            height: windowHeight / 0.618,
+            width: windowHeight / 0.618,
+            height: windowHeight,
             cache: true,
             href: conf.href,
             modal: true
