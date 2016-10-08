@@ -54,7 +54,7 @@ $(() => {
     $.get('/assets/json/icons.json', (icons) => {
         icons.forEach((icon, i) => {
             renderWindow(icon);
-            var win = $('#' + icon.id + 'window'),
+            var win = $('#' + icon.id + '-window'),
                 tid = icon.id + '-task-list-item';
             $('#' + icon.id).css({
                 top: matrixOffsetX + 'px',
