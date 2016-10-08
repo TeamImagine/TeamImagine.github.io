@@ -22,7 +22,7 @@ $(() => {
             height: windowHeight,
             closed: true,
             cache: true,
-            href: '/assets/tpl/' + conf.id + '/index.html',
+            href: '/assets/tpl/' + conf.id,
             modal: false,
             collapsible: false
         });
