@@ -416,3 +416,9 @@ a:hover {
 #bg-list img {
     width: 100%;
 }
+
+.panel li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
