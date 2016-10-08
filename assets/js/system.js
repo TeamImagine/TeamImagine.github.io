@@ -1,6 +1,3 @@
-/**
- * 生成桌面图标的窗口的载体，练习使用前端模板引擎，实际上使用 PHP 会方便
- **/
 $(() => {
 
     (function (src){
@@ -132,23 +129,3 @@ $(() => {
         }
     }, 1000);
 });
-
-var messager = {
-    slide: function(title, text) {
-        return $.messager.show({
-            title: title,
-            msg: text,
-            showType: 'slide',
-            style: {
-                bottom: 40,
-                top: '',
-                left: '',
-                right: 5
-            }
-        });
-    },
-    confirm: function(title, message, cb) {
-        return $.messager.confirm(title, message, cb);
-    }
-};
-
