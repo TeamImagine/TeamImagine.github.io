@@ -19,7 +19,7 @@ $(() => {
     var windowWidth = $(document).width(),
         windowHeight = $(document).height(),
         matrixOffsetX = 10, matrixOffsetY = 10;
-    if (windowHeight > windowWidth) { // 避免出现显示器的宽度小于高度的情况，好在我是双屏，遇到了这个问题
+    if (windowHeight > windowWidth) { // 避免出现显示器竖放导致宽度小于高度的情况
         windowHeight = windowWidth * 0.8;
     }
     windowHeight = windowHeight * 0.7;
@@ -33,7 +33,7 @@ $(() => {
             width: windowHeight / 0.618,
             height: windowHeight,
             closed: true,
-            cache: false,
+            cache: true,
             href: '/assets/tpl/' + conf.id + '/index.html',
             modal: false,
             collapsible: false,
@@ -70,7 +70,7 @@ $(() => {
                     win = $('#' + wid),
                     tid = icon.id + '-task-list-item',
                     url = '/asserts/tpl/' + icon.id + '/';
-                $('#' + wid).window('open', 'center'); // 弹出层居中
+                // $('#' + wid).window('open', 'center'); // 弹出层居中
                 // 增加任务栏图标
                 if ($('#' + tid).length === 0) {
                     var iconHtml = '<a id="' + tid + '" class="task-item" href="javascript:;"></a>';
