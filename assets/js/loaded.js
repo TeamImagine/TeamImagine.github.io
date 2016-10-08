@@ -20,7 +20,7 @@ $(() => {
             width: windowHeight / 0.618,
             height: windowHeight,
             cache: true,
-            href: conf.href,
+            href: '/asserts/tpl/' + conf.id + '/',
             modal: false
         });
     };
