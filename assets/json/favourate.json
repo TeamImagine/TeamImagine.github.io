@@ -1,0 +1,6 @@
+---
+layout: nil
+---
+
+{{ site.data.favourate | jsonify }}
+
