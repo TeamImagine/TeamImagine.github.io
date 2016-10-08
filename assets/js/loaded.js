@@ -18,7 +18,6 @@ $(() => {
             title: conf.title,
             width: windowHeight,
             height: windowHeight / 0.618,
-            closed: true,
             cache: true,
             href: conf.href,
             modal: true
