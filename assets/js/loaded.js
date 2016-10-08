@@ -16,6 +16,7 @@ $(() => {
         var ele = $('<li id="' + conf.id + '"></li>');
         $('#window-queen').append(ele);
         ele.window({
+            id: conf.id + '-window'
             title: conf.name,
             width: windowHeight / 0.618,
             height: windowHeight,
