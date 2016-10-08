@@ -50,7 +50,7 @@ $(() => {
         
     };
 
-    $.get('/icons.json', (icons) => {
+    $.get('/json/icons.json', (icons) => {
         icons.forEach((icon, i) => {
             renderWindow(icon);
             $('#' + icon.id).click(() => {
@@ -92,16 +92,15 @@ $(() => {
         });
     });
 
-
     /***
      * 桌面图标特效
      */
     $('.item').hover(function(){
-        var _this = $(this),
+        var self = $(this),
             clazz = 'item-window-animated pulse';
-        _this.addClass(clazz);
+        self.addClass(clazz);
         setTimeout(function(){
-            _this.removeClass(clazz);
+            self.removeClass(clazz);
         }, 1000);
     });
 
