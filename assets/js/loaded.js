@@ -12,15 +12,16 @@ $(() => {
     windowHeight = windowHeight * 0.7;
 
     var renderWindow = (conf) => {
+        console.log(conf);
         var ele = $('<li id="' + conf.id + '"></li>');
         $('#window-queen').append(ele);
         ele.window({
-            title: conf.title,
+            title: conf.name,
             width: windowHeight / 0.618,
             height: windowHeight,
             cache: true,
             href: conf.href,
-            modal: true
+            modal: false
         });
     };
 
