@@ -60,12 +60,14 @@ $(() => {
                 left: matrixOffsetY + 'px'
             }).click(() => {
                 $('#' + icon.id + '-window').window('open', 'center');
+                if($('#' + tid).length > 0){
+                    return;
+                }
                 var taskicon = taskbar.append($('<a id="' + tid + '" class="task-item" href="javascript:;"></a>'));
                 if (!navigator.onLine) {
                     alert('网络已离线...');
                 }
                 // 点击状态栏按钮触发不同的动作
-                
                 taskicon.click(() => {
                     if (win.hasClass('maximized')) {
                         win.window('open');
