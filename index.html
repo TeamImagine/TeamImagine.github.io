@@ -69,7 +69,7 @@ layout: nil
 <div id="mm" class="easyui-menu" style="width:120px;">
     <div id="background-menu-item" data-options="iconCls:'icon-reload'">切换壁纸</div>
 </div>
-<div id="window-queen"></div>
+<ul id="window-queen"></ul>
 <script type="text/html" id="window-template">
     <div id="${itemId}-window-container" title="${itemName}" data-item-id="${itemId}" class="easyui-dialog" resizable ="true" collapsible="false" minimizable="true" maximizable="true" cache="true" href="/assets/tpl/${itemId}/" style="width: ${windowWidth}px; height: ${windowHeight}px;"
     closed="true" shadow="false" data-options="{{if (footerType && footerText)}}footer: '#${itemId}-footer', {{/if}}onBeforeOpen: itemWindowOpenPb, onOpen: itemWindowOpenCb, onMinimize: itemWindowMinsizeCb, onBeforeClose: itemWindowCloseCb">
