@@ -12,14 +12,15 @@ gulp.task('clean', function () {
 gulp.task('dest', ['clean'], function(){
 	gulp.src([
 		'node_modules/*.css/*.css',
-		'node_modules/*.css/LICENSE*'
+		'node_modules/*/LICENSE*',
 	]).pipe(gulp.dest('assets/lib'));
 	gulp.src([
-		'node_modules/moment/LICENSE',
+		'node_modules/medium-editor/dist/*/medium-editor.min.*'
+	]).pipe(gulp.dest('assets/lib/medium-editor'));
+	gulp.src([
 		'node_modules/moment/min/moment-with-locales.min.js'
 	]).pipe(gulp.dest('assets/lib/moment'));
 	gulp.src([
-		'node_modules/nunjucks/LICENSE',
 		'node_modules/nunjucks/browser/nunjucks.min.js'
 	]).pipe(gulp.dest('assets/lib/nunjucks'));
 });
