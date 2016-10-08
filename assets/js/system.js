@@ -50,7 +50,7 @@ $(() => {
         
     };
 
-    $.get('/json/icons.json', (icons) => {
+    $.get('/assets/json/icons.json', (icons) => {
         icons.forEach((icon, i) => {
             renderWindow(icon);
             $('#' + icon.id).click(() => {

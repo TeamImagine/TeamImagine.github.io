@@ -1,6 +1,6 @@
 var initDatagrid = function() {
     $('#homework-dg').datagrid({
-        url: '/homework.json',
+        url: '/assets/json/homework.json',
         method: 'GET',
         rownumbers: true,
         nowrap: false,
