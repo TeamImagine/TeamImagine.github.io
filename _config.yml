@@ -13,7 +13,7 @@ author:
 # Staticman
 staticman:
  allowedFields: ['title', 'description']
- branch: main
+ branch: test
  commitMessage: "Hey human, here is a new entry."
  filename: "entry{@timestamp}"
  format: yaml
