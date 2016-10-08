@@ -4,14 +4,33 @@
 $(() => {
 
     // 弹窗相关
-    window.windowWidth = $(document).width(),
-    window.windowHeight = $(document).height();
-    if (window.windowHeight > windowWidth) { // 避免出现显示器的宽度小于高度的情况，好在我是双屏，遇到了这个问题
-        window.windowHeight = window.windowWidth * 0.8;
+    var windowWidth = $(document).width(),
+        windowHeight = $(document).height();
+    if (windowHeight > windowWidth) { // 避免出现显示器的宽度小于高度的情况，好在我是双屏，遇到了这个问题
+        windowHeight = windowWidth * 0.8;
     }
-    window.windowHeight = windowHeight * 0.7;
+    windowHeight = windowHeight * 0.7;
 
-    $.get('/assets/tpl/framework/win_framework.html', (html) => {
+    var renderWindow = (conf) => {
+        console.log(conf);
+        $('#dd').window({
+            title: conf.title,
+            width: windowHeight,
+            height: windowHeight / 0.618,
+            closed: true,
+            cache: true,
+            href: conf.href,
+            modal: true
+        });
+    };
+
+    $.get('/icons.json', (icons) => {
+        icons.forEach((o, i) => {
+            renderWindow(o, i);
+        });
+    })
+
+    /*$.get('/assets/tpl/framework/win_framework.html', (html) => {
         var ft = {
             notice: '注意'
         },
@@ -32,7 +51,7 @@ $(() => {
             addWindowTemplate(o.id, o.innerText, type, text);
         });
         addWindowTemplate('background', '切换桌面背景');
-    })
+    })*/
 
 
 
