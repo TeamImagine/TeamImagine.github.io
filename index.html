@@ -42,9 +42,9 @@ layout: nil
     <div id="desktop">
         <div id="matrix">
             {% for icon in site.data.icons %}
-            <div class="item" id="{{ homework.id }}" data-footer-type="" data-footer-text="{{ homework.footer }}">
-                <div class="icon"><i id="{{ homework.id }}-icon" class="item-icon"></i></div>
-                <div class="name">{{ homework.name }}</div>
+            <div class="item" id="{{ icon.id }}" data-footer-type="" data-footer-text="{{ icon.footer }}">
+                <div class="icon"><i id="{{ icon.id }}-icon" class="item-icon"></i></div>
+                <div class="name">{{ icon.name }}</div>
             </div>
             {% endfor %}
             <!-- <div class="item" id="homework" data-footer-type="notice" data-footer-text="列表中，状态红色的中划线的题目为待完成。">
