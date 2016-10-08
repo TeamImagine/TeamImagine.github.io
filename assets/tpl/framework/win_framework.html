@@ -1,0 +1,4 @@
+<div id="${itemId}-window-container" title="${itemName}" data-item-id="${itemId}" class="easyui-dialog" resizable ="true" collapsible="false" minimizable="true" maximizable="true" cache="true" href="/assets/tpl/${itemId}/" style="width: ${windowWidth}px; height: ${windowHeight}px;"
+    closed="true" shadow="false" data-options="{{if (footerType && footerText)}}footer: '#${itemId}-footer', {{/if}}onBeforeOpen: itemWindowOpenPb, onOpen: itemWindowOpenCb, onMinimize: itemWindowMinsizeCb, onBeforeClose: itemWindowCloseCb">
+</div>
+{{if (footerType && footerText)}}<div id="${itemId}-footer" class="window-footer"><b class="${footerType}">${footerName}：</b>${footerText}</div>{{/if}}
