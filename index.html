@@ -22,8 +22,8 @@ layout: nil
     <link rel="stylesheet" href="/assets/lib/jquery-easyui/themes/icon.css"/>
     <link rel="stylesheet" href="/assets/css/system.css"/>
     <script src="/assets/lib/jquery-easyui/jquery.min.js"></script>
+    <script src="/assets/lib/jquery-easyui/jquery.easyui.min.js"></script>
     <script src="/assets/lib/moment/moment-with-locales.min.js"></script>
-    <!-- <script src="/assets/js/jquery.tmpl.min.js"></script> -->
 </head>
 <body id="homepage" oncopy="return false" oncut="return false" onselectstart="return false" oncontextmenu="return false">
 <div id="mask">
@@ -48,26 +48,6 @@ layout: nil
                 <div class="name">{{ icon.name }}</div>
             </div>
             {% endfor %}
-            <!-- <div class="item" id="homework" data-footer-type="notice" data-footer-text="列表中，状态红色的中划线的题目为待完成。">
-                <div class="icon"><i id="homework-icon" class="item-icon"></i></div>
-                <div class="name">作业本</div>
-            </div>
-            <div class="item" id="favourate" data-footer-type="" data-footer-text="">
-                <div class="icon"><i id="favourate-icon" class="item-icon"></i></div>
-                <div class="name">收藏夹</div>
-            </div>
-            <div class="item" id="cool" data-footer-type="" data-footer-text="">
-                <div class="icon"><i id="cool-icon" class="item-icon"></i></div>
-                <div class="name">酷技术</div>
-            </div>
-            <div class="item" id="development" data-footer-type="" data-footer-text="">
-                <div class="icon"><i id="development-icon" class="item-icon"></i></div>
-                <div class="name">猿社区</div>
-            </div>
-            <div class="item" id="comment" data-footer-type="notice" data-footer-text="你和我说的话大家都能看见哦~">
-                <div class="icon"><i id="comment-icon" class="item-icon"></i></div>
-                <div class="name">留言板</div>
-            </div> -->
         </div>
     </div>
     <div id="task-bar">
@@ -96,7 +76,6 @@ layout: nil
     {{if (footerType && footerText)}}<div id="${itemId}-footer" class="window-footer"><b class="${footerType}">${footerName}：</b>${footerText}</div>{{/if}}
 </script>
 <script src="/assets/js/loaded.js"></script>
-<script src="/assets/lib/jquery-easyui/jquery.easyui.min.js"></script>
 <script src="/assets/js/system.js"></script>
 </body>
 </html>
