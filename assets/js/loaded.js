@@ -23,7 +23,8 @@ $(() => {
             closed: true,
             cache: true,
             href: '/asserts/tpl/' + conf.id + '/',
-            modal: false
+            modal: false,
+            collapsible: false
         });
         $('#' + conf.id).click(() => {
             $('#' + conf.id + '-window').window('open')
