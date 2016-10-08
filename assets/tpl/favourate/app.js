@@ -1,5 +1,6 @@
 $('#favourate-dg').treegrid({
     url: '/assets/json/favourate.json',
+    method: 'GET',
     idField: 'id',
     treeField: 'name',
     rownumbers: true,
