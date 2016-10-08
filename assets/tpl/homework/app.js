@@ -43,7 +43,7 @@ var initDatagrid = function() {
         onLoadSuccess: function(){
             $('.do-answer').click(function(){
                 // window.open('homework/answer?id=' + this.getAttribute('data-id'));
-                $.post('https://api.github.com/TeamImagine/TeamImagine.github.io/issues', {
+                $.post('https://api.github.com/repos/TeamImagine/TeamImagine.github.io/issues', {
                   "title": "Found a bug",
                   "body": "I'm having a problem with this.",
                   "assignee": "octocat",
