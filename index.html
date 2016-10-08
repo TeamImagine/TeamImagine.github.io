@@ -43,12 +43,10 @@ layout: nil
 <div id="container">
     <div id="desktop">
         <div id="matrix">
-            {% for icon in site.data.icons %}
-            <div class="item" id="{{ icon.id }}" data-footer-type="" data-footer-text="{{ icon.footer }}">
+            {% for icon in site.data.icons %}<div class="item" id="{{ icon.id }}">
                 <div class="icon"><i id="{{ icon.id }}-icon" class="item-icon"></i></div>
                 <div class="name">{{ icon.name }}</div>
-            </div>
-            {% endfor %}
+            </div>{% endfor %}
         </div>
     </div>
     <div id="task-bar">

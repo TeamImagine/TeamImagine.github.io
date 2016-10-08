@@ -30,31 +30,7 @@ $(() => {
         icons.forEach((o, i) => {
             renderWindow(o, i);
         });
-    })
-
-    /*$.get('/assets/tpl/framework/win_framework.html', (html) => {
-        var ft = {
-            notice: '注意'
-        },
-        addWindowTemplate = function(id, innerText, type, text){
-            $('#window-queen').append(nunjucks.renderString(html, {
-                itemId: id, // 图表相关
-                itemName: innerText,
-                windowWidth: window.windowHeight / 0.618, // 动态的窗口宽度，也人云亦云一把，使用黄金分隔（0.618）
-                windowHeight: window.windowHeight, // 动态的窗口高度，更具浏览器窗口的宽度计算窗口的宽度，因为在纵轴方向的溢出被隐藏
-                footerType: type, // 窗口的 footer 的类型
-                footerName: ft[type], // 窗口 footer 文本中加粗的部分
-                footerText: text // 窗口 footer 文本中布加粗的部分
-            }));
-        };
-        $('#matrix .item').each(function(i, o) {
-            var type = o.getAttribute('data-footer-type'),
-                text = o.getAttribute('data-footer-text');
-            addWindowTemplate(o.id, o.innerText, type, text);
-        });
-        addWindowTemplate('background', '切换桌面背景');
-    })*/
-
+    });
 
 
     /***

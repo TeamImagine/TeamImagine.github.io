@@ -39,7 +39,7 @@ $(function() {
             left: window.matrix_offset_x + 'px'
         }).click(function(e) { // 绑定桌面图标点击事件
             var _this = $(e.target).closest('.item'),
-                wid = o.id + '-window-container',
+                wid = o.id + '-window',
                 tid = o.id + '-task-list-item',
                 url = '/asserts/tpl/' + o.id + '/';
             $('#' + wid).window('open', 'center'); // 弹出层居中
