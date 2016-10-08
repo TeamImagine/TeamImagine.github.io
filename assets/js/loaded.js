@@ -11,6 +11,10 @@ $(() => {
     }
     window.windowHeight = windowHeight * 0.7;
 
+    $.get('/assets/tpl/framework/win_framework.html', (html) => {
+        console.log(html);
+    })
+
     var ft = {
         notice: '注意'
     },
