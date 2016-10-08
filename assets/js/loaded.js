@@ -16,7 +16,7 @@ $(() => {
             notice: '注意'
         },
         addWindowTemplate = function(id, innerText, type, text){
-            $('#window-queen').html(nunjucks.renderString(html, {
+            $('#window-queen').append(nunjucks.renderString(html, {
                 itemId: id, // 图表相关
                 itemName: innerText,
                 windowWidth: window.windowHeight / 0.618, // 动态的窗口宽度，也人云亦云一把，使用黄金分隔（0.618）
