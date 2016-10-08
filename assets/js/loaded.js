@@ -13,16 +13,20 @@ $(() => {
 
     var renderWindow = (conf) => {
         console.log(conf);
-        var ele = $('<li id="' + conf.id + '"></li>');
+        var ele = $('<li>');
         $('#window-queen').append(ele);
         ele.window({
             id: conf.id + '-window',
             title: conf.name,
             width: windowHeight / 0.618,
             height: windowHeight,
+            closed: true,
             cache: true,
             href: '/asserts/tpl/' + conf.id + '/',
             modal: false
+        });
+        $('#' + conf.id).click(() => {
+            $('#' + conf.id + '-window').window('open')
         });
     };
 
