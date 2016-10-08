@@ -64,7 +64,8 @@ $(() => {
                 if($('#' + tid).length > 0){
                     return;
                 }
-                var taskicon = taskbar.append($('<a id="' + tid + '" class="task-item" href="javascript:;"></a>'));
+                var taskicon = $('<a id="' + tid + '" class="task-item" href="javascript:;"></a>');
+                taskbar.append(taskicon);
                 if (!navigator.onLine) {
                     alert('网络已离线...');
                 }
