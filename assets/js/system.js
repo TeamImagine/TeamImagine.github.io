@@ -65,11 +65,14 @@ $(() => {
                     alert('网络已离线...');
                 }
                 // 点击状态栏按钮触发不同的动作
-                if (win.hasClass('maximized')) {
-                    win.window('open');
-                } else {
-                    win.window('minimize');
-                }
+                
+                taskicon.click(() => {
+                    if (win.hasClass('maximized')) {
+                        win.window('open');
+                    } else {
+                        win.window('minimize');
+                    }
+                })
             });
             // 桌面图标换列，重新计算偏移量
             if (i > 0 && i % 9 === 0) { 
