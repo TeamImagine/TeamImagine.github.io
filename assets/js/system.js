@@ -80,10 +80,10 @@ $(() => {
                             alert('网络已离线...');
                         }
                         // 点击状态栏按钮触发不同的动作
-                        if (wid.hasClass('maximized')) {
-                            wid.window('open');
+                        if (win.hasClass('maximized')) {
+                            win.window('open');
                         } else {
-                            wid.window('minimize');
+                            win.window('minimize');
                         }
                     });
                 }
