@@ -17,8 +17,8 @@ gulp.task('dest', ['clean'], function(){
 	]).pipe(gulp.dest('assets/lib'));
 	gulp.src([
 		'node_modules/codemirror/lib/*',
-		'node_modules/codemirror/theme/neo.css',
-		'node_modules/codemirror/mode/markdown/*',
+		'node_modules/codemirror/*/neo.css',
+		'node_modules/codemirror/*/markdown/*',
 	])
 		.pipe(gulp.dest('assets/lib/codemirror'));
 	/*gulp.src('node_modules/nunjucks/browser/nunjucks.min.js')
