@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "codemirror": "^5.19.0",
     "medium-editor": "^5.22.1",
     "moment": "^2.15.1",
     "normalize.css": "^5.0.0",
