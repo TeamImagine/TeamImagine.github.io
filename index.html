@@ -44,7 +44,7 @@ layout: nil
     <div id="desktop">
         <div id="matrix">
             {% for icon in site.data.icons %}<div class="item" id="{{ icon.id }}">
-                <div class="icon"><i id="{{ icon.id }}-icon" class="item-icon"></i></div>
+                <div class="icon"><i id="{{ icon.id }}-icon" class="item-icon" data-link="{{ icon.link }}"></i></div>
                 <div class="name">{{ icon.name }}</div>
             </div>{% endfor %}
         </div>
