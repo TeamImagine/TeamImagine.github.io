@@ -26,7 +26,6 @@ $(() => {
     windowHeight = windowHeight * 0.7;
 
     var renderWindow = (conf) => {
-        console.log(conf);
         var ele = $('<li>');
         $('#window-queen').append(ele);
         var url = '/assets/tpl/' + conf.id + '/index.html';
@@ -37,7 +36,7 @@ $(() => {
             height: windowHeight,
             closed: true,
             cache: true,
-            href: url,
+            href: conf.link ? conf.link : ('/assets/tpl/' + conf.id + '/index.html'),
             modal: false,
             collapsible: false,
             onOpen: function(){
