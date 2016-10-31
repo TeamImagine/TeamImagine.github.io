@@ -1,6 +1,6 @@
 $(() => {
 
-    (function (src){
+    ((src) => {
         if ($.trim(src).length > 0) {
             $('#homepage').css({
                 'background': 'url(' + src + ')',
@@ -11,7 +11,7 @@ $(() => {
         }
     })(localStorage.getItem('background-img-src'));
 
-    setTimeout(function() {
+    setTimeout(() => {
         $('#mask').fadeOut(50);
     }, 2500);
 
@@ -26,8 +26,10 @@ $(() => {
     windowHeight = windowHeight * 0.7;
 
     var renderWindow = (conf) => {
+        console.log(conf);
         var ele = $('<li>');
         $('#window-queen').append(ele);
+        var url = '/assets/tpl/' + conf.id + '/index.html';
         ele.window({
             id: conf.id + '-window',
             title: conf.name,
@@ -35,7 +37,7 @@ $(() => {
             height: windowHeight,
             closed: true,
             cache: true,
-            href: '/assets/tpl/' + conf.id + '/index.html',
+            href: url,
             modal: false,
             collapsible: false,
             onOpen: function(){
