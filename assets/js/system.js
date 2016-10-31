@@ -36,7 +36,7 @@ $(() => {
             height: windowHeight,
             closed: true,
             cache: true,
-            href: conf.link ? conf.link : ('/assets/tpl/' + conf.id + '/index.html'),
+            href: '/assets/tpl/' + conf.id + '/index.html',
             modal: false,
             collapsible: false,
             onOpen: function(){
